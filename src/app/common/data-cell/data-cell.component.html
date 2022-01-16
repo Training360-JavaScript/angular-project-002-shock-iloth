@@ -1,0 +1,8 @@
+<div class="form-group row">
+  <div class="col-3 d-md-none">{{ key | titlecase }}: </div>
+  <div class="col-9 col-md-12 text-left" [ngSwitch]="editor">
+    <input *ngSwitchCase="'text'" type="text" class="form-control" [(ngModel)]="data[key]">
+    <input *ngSwitchCase="'checkbox'" type="checkbox" class="form-control" [(ngModel)]="data[key]">
+    <input *ngSwitchDefault type="text" readonly class="form-control-plaintext" [(ngModel)]="data[key]">   
+  </div>
+</div>

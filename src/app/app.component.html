@@ -75,11 +75,25 @@
 </nav>
 <div class="container">
   <div class="row">
-    <div class="col-8">
-      ...
+    <div class="col-12">
+      <app-data-list
+        [dataList]="users"
+        (selectClick)="onSelectClick($event)"
+        (updateClick)="onUpdateClick($event)"
+        (deleteClick)="onDeleteClick($event)"
+      ></app-data-list>
     </div>
-    <div class="col-4">
-      ...
+    <div class="modal fade" [class]="modalShow" [style.display]="modalDisplay" role="dialog" id="userdetail" (click)="onModalClose()">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <app-user-detail
+              [user]="currentUser"
+              (delUser)="onDeleteClick($event)"
+            ></app-user-detail>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

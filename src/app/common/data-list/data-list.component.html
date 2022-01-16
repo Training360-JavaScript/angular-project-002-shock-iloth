@@ -1,0 +1,15 @@
+<div class="row d-none d-md-flex">
+  <div class="col-1 text-bold">id</div>
+  <div class="col-3 text-bold">Name</div>
+  <div class="col-3 text-bold">Email</div>
+  <div class="col-3 text-bold">Address</div>
+  <div class="col-1 text-bold">Active</div>
+  <div class="col-1 text-bold">Action</div>
+</div>
+<app-data-row 
+  *ngFor="let row of dataList"
+  [dataRow]="row"
+  (selectClick)="onSelectClick(row)"
+  (updateClick)="onUpdateClick(row)"
+  (deleteClick)="onDeleteClick(row)"
+></app-data-row>

@@ -1,0 +1,17 @@
+<div class="btn-group">
+  <app-action-button 
+    [btnClass]="'btn-info'" 
+    [icon]="'fa-eye'"
+    (click)="onSelectButtonClick()"
+  ></app-action-button> 
+  <app-action-button 
+    [btnClass]="'btn-primary'" 
+    [icon]="'fa-pencil'"
+    (click)="onUpdateButtonClick()"
+  ></app-action-button> 
+  <app-action-button 
+    [btnClass]="'btn-danger'" 
+    [icon]="'fa-trash'"
+    (click)="onDeleteButtonClick()"
+  ></app-action-button>
+</div>

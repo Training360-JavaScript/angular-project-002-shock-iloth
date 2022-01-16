@@ -1,0 +1,12 @@
+<div class="row">
+  <app-data-cell [data]="dataRow" key="id" class="col-12 col-md-1"></app-data-cell>
+  <app-data-cell [data]="dataRow" key="name" class="col-12 col-md-3" editor="text"></app-data-cell>
+  <app-data-cell [data]="dataRow" key="email" class="col-12 col-md-3" editor="text"></app-data-cell>
+  <app-data-cell [data]="dataRow" key="address" class="col-12 col-md-3" editor="text"></app-data-cell>
+  <app-data-cell [data]="dataRow" key="active" class="col-12 col-md-1" editor="checkbox"></app-data-cell>
+  <app-action-button-group class="col-12 col-md-1"
+    (selectClick)="onSelectClicked()"
+    (updateClick)="onUpdateClicked()"
+    (deleteClick)="onDeleteClicked()"
+  ></app-action-button-group>
+</div>
